@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hahn Technologies Corp — One Family. Many Ventures. One Mission.</title>
+  <meta name="description" content="Hahn Technologies Corp is a family-led holding company building faith-driven ventures in AI, wellness, and hydration — with real-world discipline and a purpose bigger than business." />
+  <link rel="icon" href="hahn-tech-rooster.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a1120;
+      --bg-2: #0e1728;
+      --surface: #131f36;
+      --surface-2: #17253f;
+      --line: #24344f;
+      --ink: #eaf1fb;
+      --muted: #9fb2cc;
+      --steel: #5fa0e0;
+      --steel-light: #8fc0f0;
+      --gold: #cba45a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg); color: var(--ink); line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .word { font-family: "Sora", system-ui, sans-serif; line-height: 1.15; letter-spacing: -0.01em; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+    .accent { color: var(--steel-light); }
+    .eyebrow { text-transform: uppercase; letter-spacing: .2em; font-size: .74rem; font-weight: 600; color: var(--gold); }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10,17,32,.82); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { display: flex; align-items: center; gap: .7rem; font-family: "Sora"; font-weight: 700; font-size: 1.05rem; }
+    .brand img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
+    .brand span { line-height: 1.05; }
+    .brand small { display: block; font-family: "Inter"; font-weight: 500; font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    nav.links a { color: var(--muted); font-size: .92rem; font-weight: 500; margin-left: 1.6rem; transition: color .2s; }
+    nav.links a:hover { color: var(--steel-light); }
+    .btn {
+      display: inline-block; font-weight: 600; font-size: .92rem;
+      padding: .7rem 1.4rem; border-radius: 999px; transition: transform .15s, background .2s, border-color .2s;
+    }
+    .btn-primary { background: var(--steel); color: #06101f; }
+    .btn-primary:hover { background: var(--steel-light); transform: translateY(-1px); }
+    .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+    .btn-ghost:hover { border-color: var(--steel); transform: translateY(-1px); }
+    @media (max-width: 760px) { nav.links { display: none; } }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(60% 55% at 78% 18%, rgba(95,160,224,.20), transparent 60%),
+        radial-gradient(50% 50% at 10% 90%, rgba(203,164,90,.10), transparent 60%);
+    }
+    .hero-inner { position: relative; display: grid; grid-template-columns: 1.35fr .9fr; gap: 3rem; align-items: center; padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 700; margin: 1.2rem 0 1.3rem; }
+    .hero p.lead { color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.22rem); max-width: 42ch; margin-bottom: 2rem; }
+    .cta-row { display: flex; gap: .8rem; flex-wrap: wrap; }
+    .emblem { justify-self: center; position: relative; }
+    .emblem img { width: min(340px, 70vw); height: auto; border-radius: 50%; box-shadow: 0 30px 70px -20px rgba(95,160,224,.5); }
+    @media (max-width: 860px) { .hero-inner { grid-template-columns: 1fr; text-align: center; } .hero p.lead { margin-inline: auto; } .cta-row { justify-content: center; } .emblem { order: -1; } }
+
+    /* Section shells */
+    section { padding: clamp(3.2rem, 7vw, 5.5rem) 0; }
+    .section-head { max-width: 640px; margin-bottom: 2.6rem; }
+    .section-head.center { margin-inline: auto; text-align: center; }
+    .section-head h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); font-weight: 600; margin: .8rem 0 .8rem; }
+    .section-head p { color: var(--muted); font-size: 1.05rem; }
+    .band { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+    /* Ventures grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
+    .card {
+      background: linear-gradient(180deg, var(--surface), var(--bg-2));
+      border: 1px solid var(--line); border-radius: 18px; padding: 1.9rem;
+      transition: transform .18s, border-color .2s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--steel); }
+    .card .tag { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+    .card h3 { font-size: 1.3rem; font-weight: 600; margin: .5rem 0 .6rem; }
+    .card p { color: var(--muted); font-size: .96rem; }
+    .card .go { display: inline-block; margin-top: 1rem; font-size: .9rem; font-weight: 600; color: var(--steel-light); }
+
+    /* Values */
+    .values { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.6rem; }
+    .value h3 { font-size: 1.12rem; font-weight: 600; margin-bottom: .4rem; }
+    .value h3::before { content: ""; display: inline-block; width: 22px; height: 2px; background: var(--steel); vertical-align: middle; margin-right: .6rem; }
+    .value p { color: var(--muted); font-size: .95rem; }
+
+    /* About / family */
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    @media (max-width: 820px) { .about { grid-template-columns: 1fr; gap: 2rem; } }
+    .person { border-left: 2px solid var(--line); padding-left: 1.2rem; margin-bottom: 1.6rem; }
+    .person h4 { font-family: "Sora"; font-size: 1.05rem; font-weight: 600; }
+    .person span { font-size: .82rem; color: var(--gold); font-weight: 500; }
+    .person p { color: var(--muted); font-size: .95rem; margin-top: .35rem; }
+    .about p.body { color: var(--muted); margin-bottom: 1.1rem; }
+    .about .os { font-family: "Sora"; font-size: 1.2rem; color: var(--ink); font-weight: 500; border-left: 3px solid var(--steel); padding-left: 1rem; margin: 1.4rem 0; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+    @media (max-width: 640px) { .stats { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; } }
+    .stat .n { font-family: "Sora"; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--steel-light); }
+    .stat .l { font-size: .82rem; color: var(--muted); margin-top: .2rem; }
+
+    /* Mission */
+    .mission { background: linear-gradient(160deg, #0e1c31, #0a1120); border: 1px solid var(--line); border-radius: 22px; padding: clamp(2rem, 5vw, 3.5rem); text-align: center; }
+    .mission blockquote { font-family: "Sora"; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 600; max-width: 22ch; margin: 0 auto 1.2rem; }
+    .mission p { color: var(--muted); max-width: 52ch; margin: 0 auto; }
+    .mission .verse { color: var(--gold); font-size: .85rem; letter-spacing: .04em; margin-top: 1.2rem; }
+
+    /* Contact */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+    @media (max-width: 760px) { .contact { grid-template-columns: 1fr; text-align: center; } }
+    .contact-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 2rem; }
+    .contact-card .line { display: flex; gap: .7rem; align-items: baseline; margin-bottom: .7rem; font-size: 1rem; }
+    .contact-card .line .k { color: var(--gold); font-weight: 600; min-width: 62px; }
+    .contact-card a { color: var(--steel-light); font-weight: 500; }
+
+    footer { border-top: 1px solid var(--line); padding: 2.2rem 0; color: var(--muted); font-size: .85rem; }
+    .foot { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <img src="hahn-tech-rooster.jpeg" alt="Hahn Technologies Corp" />
+        <span>Hahn Technologies<small>Corp</small></span>
+      </a>
+      <nav class="links">
+        <a href="#ventures">Ventures</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">Family-Led Holding Company · New Bern, NC</span>
+        <h1>One family.<br />Many ventures.<br /><span class="accent">One mission.</span></h1>
+        <p class="lead">
+          Hahn Technologies Corp builds and backs faith-driven companies across
+          AI, wellness, and hydration — run with real-world discipline, honesty
+          over hype, and a purpose bigger than business.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#ventures">Explore Our Ventures</a>
+          <a class="btn btn-ghost" href="#mission">Our Mission</a>
+        </div>
+      </div>
+      <div class="emblem">
+        <img src="hahn-tech-rooster.jpeg" alt="Hahn Technologies Corp emblem" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section class="band" id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Approach</span>
+        <h2>Discipline first. Hype never.</h2>
+        <p>
+          We build businesses the way they should be built — with quality that
+          doesn't cut corners, honesty over hype, and people before
+          transactions. Every venture we run answers to the same standard.
+        </p>
+      </div>
+      <div class="values">
+        <div class="value">
+          <h3>Quality That Doesn't Cut Corners</h3>
+          <p>Independent testing, real accountability, and standards we'd stake our name on — because we do.</p>
+        </div>
+        <div class="value">
+          <h3>Honesty Over Hype</h3>
+          <p>We tell people the truth, even when it costs us a sale. Trust compounds; hype doesn't.</p>
+        </div>
+        <div class="value">
+          <h3>People Before Transactions</h3>
+          <p>Relationships drive everything. We know the people we serve — and we treat them like family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ventures -->
+  <section id="ventures">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">The Family of Companies</span>
+        <h2>Ventures under Hahn Technologies Corp</h2>
+        <p>Distinct businesses, one set of values — and one mission behind them all.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Artificial Intelligence</span>
+          <h3>Hahn AI</h3>
+          <p>AI advisory and implementation for small and mid-sized businesses — practical, vendor-neutral, and honest about whether you're even ready. "Intelligence, applied."</p>
+          <a class="go" href="https://hahn.ai" target="_blank" rel="noopener">Visit hahn.ai →</a>
+        </div>
+        <div class="card">
+          <span class="tag">Botanical Wellness</span>
+          <h3>Koala Tea Kratom</h3>
+          <p>A decade-strong source for premium, lab-tested kratom and botanicals through Faith &amp; Fitness Enterprises — quality you'd recommend to your own mother.</p>
+          <a class="go" href="https://koalateakratom.com" target="_blank" rel="noopener">Visit koalateakratom.com →</a>
+        </div>
+        <div class="card">
+          <span class="tag">Hydration &amp; Wellness</span>
+          <h3>Living Water Delivered</h3>
+          <p>Mobile IV hydration (Neuse River IV &amp; Wellness) and Hahn Sparkling Water, sourced from Iceland — clean hydration with a heart for those in need.</p>
+          <a class="go" href="#mission">See the mission →</a>
+        </div>
+        <div class="card">
+          <span class="tag">Consulting &amp; Services</span>
+          <h3>Hahn Consulting</h3>
+          <p>Business consulting, website and app design, digital branding, and AI-assisted education — helping partners build, grow, and reach more people.</p>
+          <a class="go" href="#contact">Start a conversation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Family -->
+  <section class="band" id="about">
+    <div class="wrap about">
+      <div>
+        <span class="eyebrow">Who We Are</span>
+        <h2 style="font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:600;margin:.8rem 0 1rem;">A family business, in the truest sense</h2>
+        <p class="body">
+          Hahn Technologies Corp is led by the Hahn family and built on a story
+          of second chances. Our founder came through addiction, prison, and
+          rock bottom to a faith that reshaped everything — and turned a life
+          that was nearly lost into a life spent lifting others up.
+        </p>
+        <p class="os">"I'm a Christian. That isn't a label I tack onto a business card — it's the operating system."</p>
+        <p class="body">
+          That conviction runs through every company we build. Business is a
+          tool; the purpose is always bigger than the business.
+        </p>
+      </div>
+      <div>
+        <div class="person">
+          <h4>David Hahn</h4>
+          <span>Founder &amp; President · Ordained Minister</span>
+          <p>Entrepreneur, advocate, and founder of Faith &amp; Fitness Enterprises. Builds ventures that create opportunity and pay it forward — from transition housing to global giving.</p>
+        </div>
+        <div class="person">
+          <h4>William Hahn, Ph.D.</h4>
+          <span>Mathematician &amp; Physicist</span>
+          <p>The scientific mind behind Hahn AI — with deep expertise in machine perception and applied intelligence, keeping our technology rigorous and real.</p>
+        </div>
+        <div class="person">
+          <h4>The Hahn Family</h4>
+          <span>Combined Decades of Experience</span>
+          <p>A team spanning technology, wellness, validation, and business — accountable to each other and to the people we serve, nationwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section>
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><div class="n">10+</div><div class="l">Years in Business</div></div>
+        <div class="stat"><div class="n">5.0★</div><div class="l">Rating · 128 Reviews</div></div>
+        <div class="stat"><div class="n">4</div><div class="l">Ventures &amp; Growing</div></div>
+        <div class="stat"><div class="n">USA</div><div class="l">Nationwide Reach</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="band" id="mission">
+    <div class="wrap">
+      <div class="mission">
+        <span class="eyebrow">Why We Do It</span>
+        <blockquote>A business is a tool. The purpose is bigger than the business.</blockquote>
+        <p>
+          Our ventures fund something greater than profit. Through clean water
+          and hydration, we serve the homeless close to home — and the proceeds
+          reach families in hardship and children who simply need someone to
+          show up, all the way to Pakistan. We build so we can give.
+        </p>
+        <p class="verse">"…whoever drinks of the water that I shall give him shall never thirst." — John 4:14</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <span class="eyebrow">Let's Build Something</span>
+        <h2 style="font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:600;margin:.8rem 0 .8rem;">Reach out to Hahn Technologies Corp</h2>
+        <p style="color:var(--muted);max-width:44ch;">
+          Whether you're exploring AI, a wellness partnership, or a venture of
+          your own, we'd like to hear from you. David prefers a text — it's the
+          fastest way to reach us directly.
+        </p>
+      </div>
+      <div class="contact-card">
+        <div class="line"><span class="k">Text</span><a href="sms:+12522539629">(252) 253-9629</a></div>
+        <div class="line"><span class="k">Email</span><a href="mailto:hahntechnologiescorp@gmail.com">hahntechnologiescorp@gmail.com</a></div>
+        <div class="line"><span class="k">Based in</span><span style="color:var(--ink)">New Bern, North Carolina</span></div>
+        <div class="line"><span class="k">Web</span><span style="color:var(--ink)">hahntechcorp.com</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>&copy; <span id="yr">2026</span> Hahn Technologies Corp · New Bern, NC</div>
+      <div>Faith-driven ventures · Built to give.</div>
+    </div>
+  </footer>
+</body>
+</html>
