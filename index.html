@@ -207,6 +207,16 @@
     .form-note { font-size: .78rem; color: var(--muted); margin-top: .85rem; }
     .terms-badge { display: inline-block; margin-top: 1rem; font-size: .82rem; color: var(--gold); font-weight: 600; }
 
+    /* FAQ */
+    .faq { max-width: 800px; margin: 0 auto; }
+    .faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; margin-bottom: .9rem; padding: 0 1.4rem; }
+    .faq summary { cursor: pointer; list-style: none; padding: 1.15rem 0; font-weight: 600; font-size: 1.05rem; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--steel-light); font-weight: 400; font-size: 1.6rem; line-height: 1; }
+    .faq details[open] summary::after { content: "\2013"; }
+    .faq details[open] summary { border-bottom: 1px solid var(--line); }
+    .faq details p { color: var(--muted); font-size: .98rem; padding: 1rem 0 1.3rem; }
+
     footer { border-top: 1px solid var(--line); padding: 2.2rem 0; color: var(--muted); font-size: .85rem; }
     .foot { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center; }
   </style>
@@ -442,6 +452,57 @@
         <p class="verse">"…whoever drinks of the water that I shall give him shall never thirst." — John 4:14</p>
       </div>
     </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Questions &amp; Answers</span>
+        <h2>Frequently asked questions</h2>
+        <p>Straight answers — the way we like to do business.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Where are you located, and who do you serve?</summary>
+          <p>We're based in New Bern, North Carolina, and proudly serve small businesses across Eastern NC — plus clients nationwide for our technology and AI work. Local when it helps, remote when it's smarter.</p>
+        </details>
+        <details>
+          <summary>What services do you actually offer?</summary>
+          <p>Technology — custom websites, software, business automation, secure online payments, and practical AI consulting — plus business &amp; financial help: LLC and corporation formation, tax preparation and filing, credit education and dispute guidance, POS system setup, and buying gold, silver, and diamonds.</p>
+        </details>
+        <details>
+          <summary>How does pricing and payment work?</summary>
+          <p>The first conversation is always free. If we're a fit, most projects begin with 50% down and the balance due on completion — clear and simple, no surprises. We quote you honestly before any work starts.</p>
+        </details>
+        <details>
+          <summary>Do you do taxes and credit help? Are you CPAs?</summary>
+          <p>We provide tax preparation and filing, and for complex situations we bring in licensed professionals. We also offer credit education and help disputing genuinely inaccurate items — but we never promise to remove accurate information, and we'll always tell you what's realistic.</p>
+        </details>
+        <details>
+          <summary>Can you help my small business use AI?</summary>
+          <p>Yes — practically and honestly. We'll tell you the truth about whether AI even makes sense for your workflow before recommending anything. No hype, just tools that save you time and reach more customers.</p>
+        </details>
+        <details>
+          <summary>How do I get started?</summary>
+          <p>Text or call us at (252) 626-6236, or fill out the quick form below and we'll reach back fast. Tell us what you need — we'll take it from there.</p>
+        </details>
+      </div>
+    </div>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Where are you located, and who do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "Based in New Bern, North Carolina, serving small businesses across Eastern NC, plus clients nationwide for technology and AI work." } },
+        { "@type": "Question", "name": "What services do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "Custom websites, software, business automation, secure online payments, AI consulting, LLC and corporation formation, tax preparation, credit education and dispute guidance, POS setup, and buying gold, silver, and diamonds." } },
+        { "@type": "Question", "name": "How does pricing and payment work?", "acceptedAnswer": { "@type": "Answer", "text": "The first consultation is free. Most projects begin with 50% down and the balance due on completion. We quote honestly before any work starts." } },
+        { "@type": "Question", "name": "Do you do taxes and credit help? Are you CPAs?", "acceptedAnswer": { "@type": "Answer", "text": "We provide tax preparation and filing, bringing in licensed professionals for complex situations, and credit education plus help disputing genuinely inaccurate items. We never promise to remove accurate information." } },
+        { "@type": "Question", "name": "Can you help my small business use AI?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, practically and honestly. We assess whether AI fits your workflow before recommending anything." } },
+        { "@type": "Question", "name": "How do I get started?", "acceptedAnswer": { "@type": "Answer", "text": "Text or call (252) 626-6236, or fill out the form on hahntechcorp.com and we'll reach back quickly." } }
+      ]
+    }
+    </script>
   </section>
 
   <!-- Contact -->
