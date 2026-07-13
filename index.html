@@ -237,7 +237,15 @@
         <a href="#contact">Contact</a>
       </nav>
       <div style="display:flex;align-items:center;gap:1rem">
-        <a href="https://translate.google.com/translate?sl=en&amp;tl=hi&amp;u=https://hahntechcorp.com" target="_blank" rel="noopener" title="Translate this page / इस पेज का अनुवाद करें" style="color:var(--muted);font-size:.82rem;white-space:nowrap">🌐 हिन्दी</a>
+        <select aria-label="Translate this page" onchange="if(this.value)location.href=this.value" style="background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.4rem .7rem;font:600 .8rem inherit;cursor:pointer">
+          <option value="">🌐 Language</option>
+          <option value="https://translate.google.com/translate?sl=en&amp;tl=es&amp;u=https://hahntechcorp.com/">Español</option>
+          <option value="https://translate.google.com/translate?sl=en&amp;tl=fr&amp;u=https://hahntechcorp.com/">Français</option>
+          <option value="https://translate.google.com/translate?sl=en&amp;tl=pt&amp;u=https://hahntechcorp.com/">Português</option>
+          <option value="https://translate.google.com/translate?sl=en&amp;tl=zh-CN&amp;u=https://hahntechcorp.com/">中文</option>
+          <option value="https://translate.google.com/translate?sl=en&amp;tl=hi&amp;u=https://hahntechcorp.com/">हिन्दी</option>
+          <option value="https://translate.google.com/translate?sl=en&amp;tl=ar&amp;u=https://hahntechcorp.com/">العربية</option>
+        </select>
         <a class="btn btn-primary" href="#contact">Get in Touch</a>
       </div>
     </div>
