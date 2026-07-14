@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We Buy Gold, Silver, Diamonds &amp; Coins — Live Prices | Hahn Technologies Corp</title>
+  <meta name="description" content="Sell your gold, silver, diamonds, coins, and scrap for a fair, honest cash offer in New Bern, NC. See live spot prices, estimate what your gold is worth, and text David for a no-pressure quote." />
+  <meta name="keywords" content="sell gold New Bern NC, buy gold silver, scrap gold buyer, diamond buyer, rare coin buyer, precious metals New Bern, live gold price, live silver price, sell coins" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://hahntechcorp.com/gold/" />
+  <meta name="theme-color" content="#0a1120" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hahn Technologies Corp" />
+  <meta property="og:title" content="We Buy Gold, Silver, Diamonds &amp; Coins — Live Prices" />
+  <meta property="og:description" content="Fair, honest cash offers for gold, silver, diamonds, coins &amp; scrap. See live spot prices and text David for a quote." />
+  <meta property="og:url" content="https://hahntechcorp.com/gold/" />
+  <link rel="icon" href="../hahn-tech-rooster.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0a1120;--bg-2:#0e1728;--surface:#131f36;--surface-2:#17253f;--line:#24344f;--ink:#eaf1fb;--muted:#9fb2cc;--steel:#5fa0e0;--steel-light:#8fc0f0;--gold:#cba45a}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Inter",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{font-family:"Sora",system-ui,sans-serif;line-height:1.15;letter-spacing:-0.01em}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}
+    .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;font-weight:600;color:var(--gold)}
+    header{position:sticky;top:0;z-index:50;background:rgba(10,17,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:.6rem;font-family:"Sora";font-weight:700;font-size:1.02rem}
+    .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+    .btn{display:inline-block;font-weight:600;font-size:.95rem;padding:.75rem 1.4rem;border-radius:999px;transition:transform .15s,background .2s,border-color .2s}
+    .btn-gold{background:var(--gold);color:#20160a}
+    .btn-gold:hover{background:#dcb877;transform:translateY(-1px)}
+    .btn-steel{background:var(--steel);color:#06101f}
+    .btn-steel:hover{background:var(--steel-light);transform:translateY(-1px)}
+    .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+    .btn-ghost:hover{border-color:var(--steel)}
+    .nav .btn{padding:.5rem 1.1rem;font-size:.88rem}
+
+    .hero{position:relative;overflow:hidden;text-align:center;padding:clamp(3rem,7vw,5rem) 0 clamp(2rem,4vw,3rem);
+      background:radial-gradient(60% 60% at 50% 0%, rgba(203,164,90,.18), transparent 62%), linear-gradient(180deg,#0e1728,#0a1120)}
+    .hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:700;margin:.8rem auto .8rem;max-width:16ch}
+    .hero h1 .g{color:var(--gold)}
+    .hero p.lead{color:var(--muted);font-size:clamp(1.05rem,2vw,1.2rem);max-width:52ch;margin:0 auto 1.8rem}
+    .cta-row{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+
+    section{padding:clamp(2.6rem,6vw,4.2rem) 0}
+    .band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .head{max-width:640px;margin:0 auto 2rem;text-align:center}
+    .head h2{font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:600;margin:.5rem 0 .6rem}
+    .head p{color:var(--muted)}
+
+    /* Live prices */
+    .prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+    .pcard{background:linear-gradient(180deg,var(--surface),var(--bg-2));border:1px solid var(--line);border-radius:16px;padding:1.5rem;text-align:center}
+    .pcard .metal{font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+    .pcard .price{font-family:"Sora";font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;color:var(--ink);margin:.35rem 0 .1rem}
+    .pcard .unit{font-size:.78rem;color:var(--muted)}
+    .live{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8fe0a8;margin-bottom:.6rem}
+    .live .dot{width:7px;height:7px;border-radius:50%;background:#2ec76a;box-shadow:0 0 0 0 rgba(46,199,106,.6);animation:pulse 1.8s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,199,106,.55)}70%{box-shadow:0 0 0 8px rgba(46,199,106,0)}100%{box-shadow:0 0 0 0 rgba(46,199,106,0)}}
+    .updated{text-align:center;color:var(--muted);font-size:.8rem;margin-top:1rem}
+
+    /* Estimator */
+    .est{max-width:640px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(1.5rem,4vw,2.2rem)}
+    .est label{display:block;font-size:.82rem;color:var(--muted);margin-bottom:.35rem;font-weight:500}
+    .est .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+    @media (max-width:480px){.est .row{grid-template-columns:1fr}}
+    .est input,.est select{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:.7rem .8rem;font-size:1rem;font-family:inherit}
+    .est input:focus,.est select:focus{outline:none;border-color:var(--steel)}
+    .est .out{margin-top:.4rem;text-align:center;background:var(--bg-2);border:1px dashed var(--gold);border-radius:12px;padding:1.1rem}
+    .est .out .n{font-family:"Sora";font-size:1.9rem;font-weight:700;color:var(--gold)}
+    .est .out .l{font-size:.82rem;color:var(--muted);margin-top:.2rem}
+
+    .buy{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+    .bcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
+    .bcard .em{font-size:1.5rem}
+    .bcard h3{font-size:1.08rem;font-weight:600;margin:.4rem 0 .3rem}
+    .bcard p{color:var(--muted);font-size:.9rem}
+
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;counter-reset:s}
+    .step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
+    .step h3{font-size:1.05rem;font-weight:600;margin-bottom:.3rem}
+    .step h3::before{counter-increment:s;content:counter(s);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#20160a;font-size:.85rem;margin-right:.5rem;vertical-align:middle}
+    .step p{color:var(--muted);font-size:.92rem}
+
+    .cta-band{background:linear-gradient(160deg,#17253f,#0a1120);border:1px solid var(--line);border-radius:22px;padding:clamp(2rem,5vw,3rem);text-align:center;max-width:760px;margin:0 auto}
+    .cta-band h2{font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:600;margin-bottom:.7rem}
+    .cta-band p{color:var(--muted);max-width:48ch;margin:0 auto 1.5rem}
+
+    footer{border-top:1px solid var(--line);padding:2.2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
+    footer a{color:var(--steel-light);font-weight:500}
+    .fine{color:var(--muted);font-size:.76rem;max-width:640px;margin:1.2rem auto 0;text-align:center;opacity:.85}
+    .verse{color:var(--gold);font-size:.82rem;margin-top:.6rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="https://hahntechcorp.com/"><img src="../hahn-tech-rooster.jpeg" alt="Hahn Technologies Corp" /> Hahn Tech · Gold &amp; Silver</a>
+      <a class="btn btn-gold" href="sms:+12526266236">💬 Text for a quote</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">New Bern, NC · By Appointment</span>
+      <h1>We buy <span class="g">gold, silver, diamonds &amp; coins</span></h1>
+      <p class="lead">Fair, honest cash offers — no pressure, no lowball games. Bring your jewelry, bullion, scrap, coins, or diamonds and we&rsquo;ll give you a straight number based on today&rsquo;s live market.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="tel:+12526266236">📞 Call (252) 626-6236</a>
+        <a class="btn btn-steel" href="sms:+12526266236">💬 Text a photo for a quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live prices -->
+  <section id="prices">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Live Market</span>
+        <h2>Today&rsquo;s spot prices</h2>
+        <p>Updated live from the global market the moment this page loads — so you know we&rsquo;re dealing straight.</p>
+      </div>
+      <div class="live" style="justify-content:center;display:flex"><span class="dot"></span>Live spot</div>
+      <div class="prices">
+        <div class="pcard"><div class="metal">Gold</div><div class="price" id="pXAU">—</div><div class="unit">per troy oz (USD)</div></div>
+        <div class="pcard"><div class="metal">Silver</div><div class="price" id="pXAG">—</div><div class="unit">per troy oz (USD)</div></div>
+        <div class="pcard"><div class="metal">Platinum</div><div class="price" id="pXPT">—</div><div class="unit">per troy oz (USD)</div></div>
+        <div class="pcard"><div class="metal">Palladium</div><div class="price" id="pXPD">—</div><div class="unit">per troy oz (USD)</div></div>
+      </div>
+      <p class="updated" id="updated">Fetching live prices…</p>
+    </div>
+  </section>
+
+  <!-- Estimator -->
+  <section class="band" id="estimate">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Free Tool</span>
+        <h2>What&rsquo;s your gold worth?</h2>
+        <p>A quick, honest estimate of the pure-gold value in your item, using today&rsquo;s live price.</p>
+      </div>
+      <div class="est">
+        <div class="row">
+          <div>
+            <label for="grams">Weight (grams)</label>
+            <input id="grams" type="number" min="0" step="0.1" placeholder="e.g. 12.5" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="karat">Karat / purity</label>
+            <select id="karat">
+              <option value="0.999">24k (pure)</option>
+              <option value="0.9167">22k</option>
+              <option value="0.75" selected>18k</option>
+              <option value="0.5833">14k</option>
+              <option value="0.4167">10k</option>
+              <option value="0.999-silver">Silver (.999)</option>
+            </select>
+          </div>
+        </div>
+        <div class="out">
+          <div class="n" id="estOut">—</div>
+          <div class="l">Estimated pure-metal value at today&rsquo;s spot</div>
+        </div>
+        <p class="fine" style="margin-top:1rem">This is an estimate of raw metal value only, not an offer. Your actual offer depends on verified weight, purity/assay, and the current market — bring it in and we&rsquo;ll test it in front of you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we buy -->
+  <section id="buy">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">What We Buy</span><h2>Bring it in — we&rsquo;ll make an offer</h2></div>
+      <div class="buy">
+        <div class="bcard"><div class="em">💍</div><h3>Gold Jewelry</h3><p>Rings, chains, bracelets, broken or scrap — any karat.</p></div>
+        <div class="bcard"><div class="em">🥈</div><h3>Silver</h3><p>Sterling, flatware, bullion, and coins.</p></div>
+        <div class="bcard"><div class="em">🪙</div><h3>Coins &amp; Bullion</h3><p>Gold &amp; silver coins, rounds, and bars.</p></div>
+        <div class="bcard"><div class="em">💎</div><h3>Diamonds</h3><p>Loose stones and diamond jewelry — quoted by the 4 Cs.</p></div>
+        <div class="bcard"><div class="em">⚙️</div><h3>Scrap &amp; Dental</h3><p>Scrap gold, dental gold, and mixed lots.</p></div>
+        <div class="bcard"><div class="em">🏛️</div><h3>Rare &amp; Collectible Coins</h3><p>With <strong>Chick Hahn</strong> — decades of coin expertise for rare &amp; collectible pieces.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diamonds note -->
+  <section class="band" id="diamonds">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Diamonds</span>
+        <h2>Diamonds are quoted, not &ldquo;spot-priced&rdquo;</h2>
+        <p>Unlike gold and silver, diamonds don&rsquo;t trade on a public spot market — value comes from the <strong>4 Cs</strong> (carat, cut, color, clarity) and any certification. Bring yours in and we&rsquo;ll assess it honestly and make a fair offer. Have a GIA cert? Even better.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-steel" href="sms:+12526266236">💬 Text photos of your diamond</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">How It Works</span><h2>Simple, honest, no pressure</h2></div>
+      <div class="steps">
+        <div class="step"><h3>Reach out</h3><p>Text a photo or call for a ballpark, or just book a time.</p></div>
+        <div class="step"><h3>We test it</h3><p>We weigh and test your items in front of you — nothing behind closed doors.</p></div>
+        <div class="step"><h3>Fair offer</h3><p>You get a straight cash offer based on today&rsquo;s live market.</p></div>
+        <div class="step"><h3>Your call</h3><p>Take it or leave it — zero pressure, always.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / partner -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta-band">
+        <span class="eyebrow">Sell · Buy · Partner</span>
+        <h2>Get your honest cash offer today</h2>
+        <p>Selling gold, silver, coins, or diamonds in Eastern NC? Or an investor who wants to build a fair, faith-driven buying operation with us? Let&rsquo;s talk.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="tel:+12526266236">📞 Call (252) 626-6236</a>
+          <a class="btn btn-steel" href="sms:+12526266236">💬 Text David</a>
+          <a class="btn btn-ghost" href="mailto:dhahn402@gmail.com?subject=Gold%20%26%20Silver%20%E2%80%94%20Buy%2FSell%2FInvest">✉️ Email</a>
+        </div>
+      </div>
+      <p class="fine">Hahn Technologies Corp · New Bern, NC · By appointment. We deal honestly and fairly, comply with applicable dealer and ID requirements, and never pressure anyone. Live prices are informational market data, not a guaranteed offer.</p>
+      <p class="verse" style="text-align:center">&ldquo;A just weight and balance are the LORD&rsquo;s.&rdquo; — Proverbs 16:11 · Soli Deo Gloria ✝️</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      &copy; <span id="yr">2026</span> Hahn Technologies Corp · New Bern, NC ·
+      <a href="https://hahntechcorp.com/">Back to Hahn Tech →</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var SYMBOLS = [['XAU','pXAU'],['XAG','pXAG'],['XPT','pXPT'],['XPD','pXPD']];
+    var spot = {}; // price per troy oz by symbol
+    var GRAMS_PER_OZT = 31.1034768;
+    function money(n){ return '$' + n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+    function loadPrices(){
+      var done = 0;
+      SYMBOLS.forEach(function(pair){
+        fetch('https://api.gold-api.com/price/' + pair[0])
+          .then(function(r){ return r.json(); })
+          .then(function(d){
+            if(d && typeof d.price === 'number'){
+              spot[pair[0]] = d.price;
+              document.getElementById(pair[1]).textContent = money(d.price);
+              calc();
+            }
+          })
+          .catch(function(){ document.getElementById(pair[1]).textContent = 'unavailable'; })
+          .finally(function(){
+            done++;
+            if(done === SYMBOLS.length){
+              document.getElementById('updated').textContent =
+                'Live spot · updated ' + new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}) +
+                ' · source: gold-api.com';
+            }
+          });
+      });
+    }
+    function calc(){
+      var g = parseFloat(document.getElementById('grams').value);
+      var kv = document.getElementById('karat').value;
+      var out = document.getElementById('estOut');
+      if(!g || g <= 0){ out.textContent = '—'; return; }
+      var isSilver = kv === '0.999-silver';
+      var sym = isSilver ? 'XAG' : 'XAU';
+      var purity = isSilver ? 0.999 : parseFloat(kv);
+      if(!spot[sym]){ out.textContent = 'loading…'; return; }
+      var perGram = spot[sym] / GRAMS_PER_OZT;
+      var val = perGram * purity * g;
+      out.textContent = money(val);
+    }
+    document.getElementById('grams').addEventListener('input', calc);
+    document.getElementById('karat').addEventListener('change', calc);
+    loadPrices();
+  </script>
+</body>
+</html>
