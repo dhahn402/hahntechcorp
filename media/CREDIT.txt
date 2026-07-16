@@ -1,8 +1,8 @@
-Audio: "The Stars and Stripes Forever" (John Philip Sousa, 1896)
-Performed by the United States Air Force Band (2017, Symphony Orchestra).
+Audio: "The Battle Hymn of the Republic" (Julia Ward Howe / William Steffe, 1861)
+Performed by the United States Air Force Band (Heritage of America Band).
 
 STATUS: PUBLIC DOMAIN — free for any use, including commercial.
-  - Composition (Sousa, 1896): public domain by age.
+  - Composition (1861): public domain by age.
   - Recording: a work of the U.S. federal government; not subject to
     copyright under 17 U.S.C. Section 105 — public domain.
 Source: Wikimedia Commons.
