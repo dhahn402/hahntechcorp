@@ -116,8 +116,14 @@
     .btn-ghost:hover { border-color: var(--steel-light); background: rgba(95,160,224,.18); transform: translateY(-1px); }
     @media (max-width: 760px) {
       nav.links { display: none; }
-      .nav select { display: none; }          /* declutter mobile header — avoids top-row overflow */
-      .anthem { top: auto; bottom: clamp(.9rem, 3vw, 1.4rem); }  /* move player off the hero to the bottom */
+      /* keep Language + Get in Touch, just compact them so they fit next to the brand */
+      .brand small { display: none; }
+      .brand span { font-size: .92rem; }
+      .brand img { width: 32px; height: 32px; }
+      .nav > div { gap: .5rem; }
+      .nav select { padding: .34rem .5rem; font-size: .72rem; }
+      header .btn-primary { padding: .5rem .95rem; font-size: .82rem; }
+      /* anthem stays TOP-LEFT; on phones it's just the round gold button (meta hidden < 520px) */
     }
 
     /* Hero */
