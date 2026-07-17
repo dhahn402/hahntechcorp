@@ -171,6 +171,28 @@
     </div>
   </section>
 
+  <!-- Junk silver calculator -->
+  <section id="junksilver">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Free Tool</span>
+        <h2>Junk silver calculator</h2>
+        <p>Got pre-1965 US dimes, quarters, or half dollars? They&rsquo;re <strong>90% silver</strong>. Enter their total face value for a quick melt estimate at today&rsquo;s live silver price.</p>
+      </div>
+      <div class="est">
+        <div>
+          <label for="jsface">Total <em>face value</em> of your 90% silver coins ($)</label>
+          <input id="jsface" type="number" min="0" step="0.10" placeholder="e.g. 10.00 (= $10 in dimes/quarters)" inputmode="decimal" />
+        </div>
+        <div class="out" style="margin-top:1rem">
+          <div class="n" id="jsOut">—</div>
+          <div class="l">Estimated silver melt value at today&rsquo;s spot</div>
+        </div>
+        <p class="fine" style="margin-top:1rem">Based on ~0.715 troy oz of silver per $1 face value of 90% (pre-1965) US coins. Estimate only, not an offer — bring your coins &amp; broken jewelry in and we&rsquo;ll test and pay fairly off the live market.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Free appraisal: send a photo -->
   <section id="appraisal">
     <div class="wrap">
@@ -225,7 +247,7 @@
       <div class="head"><span class="eyebrow">What We Buy</span><h2>Bring it in — we&rsquo;ll make an offer</h2></div>
       <div class="buy">
         <div class="bcard"><div class="em">💍</div><h3>Gold Jewelry</h3><p>Rings, chains, bracelets, broken or scrap — any karat.</p></div>
-        <div class="bcard"><div class="em">🥈</div><h3>Silver</h3><p>Sterling, flatware, bullion, and coins.</p></div>
+        <div class="bcard"><div class="em">🥈</div><h3>Silver &amp; Junk Silver</h3><p>Sterling, flatware, bullion, and pre-1965 90% &ldquo;junk&rdquo; silver coins.</p></div>
         <div class="bcard"><div class="em">🪙</div><h3>Coins &amp; Bullion</h3><p>Gold &amp; silver coins, rounds, and bars.</p></div>
         <div class="bcard"><div class="em">💎</div><h3>Diamonds</h3><p>Loose stones and diamond jewelry — quoted by the 4 Cs.</p></div>
         <div class="bcard"><div class="em">⚙️</div><h3>Scrap &amp; Dental</h3><p>Scrap gold, dental gold, and mixed lots.</p></div>
@@ -324,7 +346,7 @@
             if(d && typeof d.price === 'number'){
               spot[pair[0]] = d.price;
               document.getElementById(pair[1]).textContent = money(d.price);
-              calc();
+              calc(); calcJunk();
             }
           })
           .catch(function(){ document.getElementById(pair[1]).textContent = 'unavailable'; })
@@ -353,6 +375,16 @@
     }
     document.getElementById('grams').addEventListener('input', calc);
     document.getElementById('karat').addEventListener('change', calc);
+    function calcJunk(){
+      var faceEl = document.getElementById('jsface');
+      var out = document.getElementById('jsOut');
+      if(!faceEl || !out){ return; }
+      var face = parseFloat(faceEl.value);
+      if(!face || face <= 0){ out.textContent = '—'; return; }
+      if(!spot['XAG']){ out.textContent = 'loading…'; return; }
+      out.textContent = money(face * 0.715 * spot['XAG']);
+    }
+    document.getElementById('jsface').addEventListener('input', calcJunk);
     loadPrices();
   </script>
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9316e0db5804345a3aeb1fd7e233c25"}'></script><!-- End Cloudflare Web Analytics -->
