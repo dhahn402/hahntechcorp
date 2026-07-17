@@ -11,6 +11,21 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://hahntechcorp.com/gold/havelock/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hahntechcorp.com/gold/jacksonville/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hahntechcorp.com/gold/morehead-city/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hahntechcorp.com/accounting/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
