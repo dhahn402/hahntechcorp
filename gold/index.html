@@ -183,6 +183,38 @@
         <a class="btn btn-gold" href="sms:+12526266236">📸 Text a photo to (252) 626-6236</a>
         <a class="btn btn-steel" href="mailto:dhahn402@gmail.com?subject=Gold%20Appraisal%20Photo">✉️ Email a photo</a>
       </div>
+      <p style="text-align:center;color:var(--muted);font-size:.82rem;margin:1.7rem 0 1.2rem">&mdash; or upload it right here &mdash;</p>
+      <form class="est" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="access_key" value="e545970d-294e-4c68-be21-f623e63bb4c4" />
+        <input type="hidden" name="subject" value="Gold appraisal request — hahntechcorp.com/gold" />
+        <input type="hidden" name="from_name" value="Hahn Tech Gold Appraisal" />
+        <div class="row">
+          <div>
+            <label for="ap-name">Your name</label>
+            <input id="ap-name" type="text" name="name" required />
+          </div>
+          <div>
+            <label for="ap-contact">Phone or email</label>
+            <input id="ap-contact" type="text" name="contact" required placeholder="so we can send your quote" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="ap-weight">Approx. weight (if known)</label>
+            <input id="ap-weight" type="text" name="weight" placeholder="e.g. 12.5g, or 'not sure'" />
+          </div>
+          <div>
+            <label for="ap-karat">Karat / type (if known)</label>
+            <input id="ap-karat" type="text" name="karat" placeholder="e.g. 14k, sterling, not sure" />
+          </div>
+        </div>
+        <label for="ap-photo">Photo of your item(s)</label>
+        <input id="ap-photo" type="file" name="attachment" accept="image/*" capture="environment" style="width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:.7rem .8rem;font-size:.92rem;font-family:inherit" />
+        <label for="ap-notes" style="display:block;margin-top:1rem">Notes (optional)</label>
+        <textarea id="ap-notes" name="notes" rows="3" placeholder="Anything you'd like us to know" style="width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:.7rem .8rem;font-size:1rem;font-family:inherit"></textarea>
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true" />
+        <button class="btn btn-gold" type="submit" style="width:100%;margin-top:1.2rem">Send for a free quote &rarr;</button>
+      </form>
       <p class="fine" style="margin-top:1.4rem">Send a clear photo and the weight if you know it. This is an estimate request, not a guaranteed offer. We never ask for payment or card details to give you a quote.</p>
     </div>
   </section>
