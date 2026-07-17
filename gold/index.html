@@ -171,6 +171,51 @@
     </div>
   </section>
 
+  <!-- Free appraisal: send/upload a photo -->
+  <section id="appraisal">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Free Appraisal</span>
+        <h2>Send a photo &mdash; get an honest number</h2>
+        <p>The fastest way to know what your gold, silver, coins, or diamonds are worth: show us. Snap a photo, add the weight if you know it, and we&rsquo;ll give you a fair, honest quote &mdash; no pressure.</p>
+      </div>
+      <div class="cta-row" style="justify-content:center;margin-bottom:1.4rem">
+        <a class="btn btn-gold" href="sms:+12526266236">📸 Text a photo to (252) 626-6236</a>
+        <a class="btn btn-steel" href="mailto:dhahn402@gmail.com?subject=Gold%20Appraisal%20Photo">✉️ Email a photo</a>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:.82rem;margin-bottom:1.4rem">&mdash; or upload it right here &mdash;</p>
+      <form class="est" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+        <div class="row">
+          <div>
+            <label for="ap-name">Your name</label>
+            <input id="ap-name" type="text" name="name" required />
+          </div>
+          <div>
+            <label for="ap-contact">Phone or email</label>
+            <input id="ap-contact" type="text" name="contact" required placeholder="so we can send your quote" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="ap-weight">Approx. weight (if known)</label>
+            <input id="ap-weight" type="text" name="weight" placeholder="e.g. 12.5g, or 'not sure'" />
+          </div>
+          <div>
+            <label for="ap-karat">Karat / type (if known)</label>
+            <input id="ap-karat" type="text" name="karat" placeholder="e.g. 14k, sterling, not sure" />
+          </div>
+        </div>
+        <label for="ap-photo">Photo of your item(s)</label>
+        <input id="ap-photo" type="file" name="photo" accept="image/*" capture="environment" style="width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:.7rem .8rem;font-size:.92rem;font-family:inherit" />
+        <label for="ap-notes" style="display:block;margin-top:1rem">Notes (optional)</label>
+        <textarea id="ap-notes" name="notes" rows="3" placeholder="Anything you'd like us to know" style="width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:.7rem .8rem;font-size:1rem;font-family:inherit"></textarea>
+        <input type="hidden" name="_subject" value="Gold appraisal request — hahntechcorp.com" />
+        <button class="btn btn-gold" type="submit" style="width:100%;margin-top:1.2rem">Send for a free quote →</button>
+      </form>
+      <p class="fine" style="margin-top:1rem">Your photo and details are used only to prepare your quote. This is an estimate request, not a guaranteed offer. We never ask for payment or card details to give you a quote.</p>
+    </div>
+  </section>
+
   <!-- What we buy -->
   <section id="buy">
     <div class="wrap">
