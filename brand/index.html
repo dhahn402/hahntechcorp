@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hahn Family Brand System — One Identity, Many Ventures</title>
+<meta name="description" content="The living brand system for the Hahn family of companies — shared DNA, typography, color, per-venture palettes, and copy-paste tokens. Unified where it counts, distinct where each venture needs its own soul." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://hahntechcorp.com/brand/" />
+<meta name="theme-color" content="#0a1120" />
+<link rel="icon" href="/hahn-tech-logo-circle.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0a1120;--bg2:#0e1728;--surface:#131f36;--surface2:#182741;--line:#24344f;
+    --ink:#eaf1fb;--muted:#9fb2cc;--steel:#5fa0e0;--gold:#cba45a;--gold-2:#e0c07a;
+    --sora:"Sora",system-ui,sans-serif;--inter:"Inter",system-ui,sans-serif;--fraunces:"Fraunces",Georgia,serif;--playfair:"Playfair Display",Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--inter);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2rem)}
+  h1,h2,h3{font-family:var(--sora);line-height:1.14;letter-spacing:-.01em}
+  a{color:var(--steel)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--gold)}
+  .rule{width:54px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:2px;margin:.7rem 0 0}
+
+  header{background:radial-gradient(60% 70% at 50% 0%,rgba(203,164,90,.14),transparent 62%),linear-gradient(180deg,var(--bg2),var(--bg));
+    text-align:center;padding:clamp(3.5rem,8vw,5.5rem) 0 clamp(2.5rem,5vw,3.5rem);border-bottom:1px solid var(--line)}
+  header h1{font-size:clamp(2.3rem,6vw,3.4rem);font-weight:800;margin:.8rem 0 .6rem}
+  header p{color:var(--muted);max-width:52ch;margin:0 auto;font-size:1.06rem}
+  header .rule{margin:1rem auto 0}
+
+  section{padding:clamp(2.6rem,5vw,3.6rem) 0;border-bottom:1px solid var(--line)}
+  .sec-head h2{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:700;margin:.5rem 0 0}
+  .sec-head p{color:var(--muted);margin:.7rem 0 1.6rem;max-width:60ch}
+
+  .cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin:0 0 .4rem;font-family:var(--inter);font-weight:700}
+  .card p{color:var(--muted);font-size:.93rem}
+
+  /* type specimens */
+  .spec{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:16px}
+  .spec .lbl{font-family:var(--inter);font-size:.8rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+  .spec .big{font-size:clamp(1.8rem,4.5vw,2.6rem);margin:.5rem 0 .2rem}
+  .spec .body{color:#cdddec;font-size:1rem;max-width:60ch;margin-top:.6rem}
+  .spec .use{color:var(--muted);font-size:.86rem;margin-top:1rem;border-top:1px solid var(--line);padding-top:.8rem}
+  .spec.biz .big{font-family:var(--sora);font-weight:700}
+  .spec.life .big{font-family:var(--fraunces);font-weight:600}
+
+  /* swatches */
+  .swatches{display:flex;flex-wrap:wrap;gap:12px}
+  .sw{border:1px solid var(--line);border-radius:12px;overflow:hidden;width:130px}
+  .sw .chip{height:66px}
+  .sw .meta{padding:8px 10px;font-size:.78rem;background:var(--surface)}
+  .sw .meta b{display:block;font-size:.82rem;color:var(--ink);font-family:var(--inter)}
+  .sw .meta code{color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+
+  /* venture table */
+  .vtable{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:6px}
+  .v{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .v .acc{width:44px;height:44px;border-radius:10px;flex:none;border:1px solid rgba(255,255,255,.15)}
+  .v .info b{font-family:var(--inter);font-size:.98rem;display:block}
+  .v .info span{color:var(--muted);font-size:.82rem}
+  .v .info .tag{display:inline-block;margin-top:3px;font-size:.7rem;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:20px;background:var(--surface2);color:var(--gold)}
+
+  pre{background:#06101f;border:1px solid var(--line);border-radius:12px;padding:18px;overflow-x:auto;margin-top:10px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.83rem;color:#cfe0f4;line-height:1.7}
+  .tok-c{color:var(--gold-2)}
+
+  .note{background:linear-gradient(180deg,#12203a,#0e1728);border:1px solid var(--gold);border-radius:14px;padding:16px 20px;margin-top:16px}
+  .note b{color:var(--gold-2)}
+  ul.clean{list-style:none;margin:.4rem 0 0}
+  ul.clean li{padding:6px 0 6px 26px;position:relative;color:#cdddec;font-size:.96rem}
+  ul.clean li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+
+  footer{padding:2.4rem 0;text-align:center;color:var(--muted);font-size:.88rem}
+  footer .sdg{color:var(--gold);font-family:var(--sora);font-weight:600;margin-top:.5rem}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="eyebrow">Hahn Family of Companies</span>
+      <h1>The Brand System</h1>
+      <p>One identity — unified where it counts, distinct where each venture needs its own soul. Every site, graphic, and future build starts here.</p>
+      <div class="rule"></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">01 · The DNA</span><h2>The thread that runs through everything</h2>
+        <p>No matter the venture, these stay the same. They're what make a Hahn site recognizably ours.</p></div>
+      <div class="cards">
+        <div class="card"><h3>🅰️ One body font</h3><p><b>Inter</b> is the body typeface on every property, always. It's the anchor of the whole family.</p></div>
+        <div class="card"><h3>🟡 One gold</h3><p><b>#cba45a → #e0c07a</b> — the signature gold accent and gradient. Same gold, family-wide. Never a second gold.</p></div>
+        <div class="card"><h3>✝️ One faith line</h3><p><b>"Soli Deo Gloria"</b> in the footer of every property. It's who we are.</p></div>
+        <div class="card"><h3>📞 One contact style</h3><p><b>Text</b> first, then <b>Call</b> — same number, plus email + "New Bern, NC." A sticky text-first CTA on every page.</p></div>
+        <div class="card"><h3>▪️ Gold hairline + eyebrow</h3><p>Section labels: uppercase, letter-spaced, gold. Under them, a short gold hairline rule. A recurring motif.</p></div>
+        <div class="card"><h3>🤝 One promise</h3><p>Honesty over hype — real claims, real reviews, no health claims, no inflated numbers. The brand IS the trust.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">02 · Typography</span><h2>Two voices, never a third</h2>
+        <p>Inter carries the body everywhere. The display font tells you which world you're in — business or lifestyle/faith. Pick one bucket per site and stay in it.</p></div>
+
+      <div class="spec biz">
+        <div class="lbl">Business voice — Sora + Inter</div>
+        <div class="big">Built right. Priced fair. No sweat.</div>
+        <div class="body">Confident, geometric, modern. The voice of the holding company and the trades. Used on: Hahn Tech Corp, Ready Tech Repairs, Gold &amp; Silver, Ubuntu, No Sweat Electrical, AI &amp; POS.</div>
+        <div class="use"><b>Headings:</b> Sora 600–800 &nbsp;·&nbsp; <b>Body:</b> Inter 400–600</div>
+      </div>
+
+      <div class="spec life">
+        <div class="lbl">Lifestyle &amp; faith voice — Fraunces + Inter</div>
+        <div class="big">Patience is the rarest edge.</div>
+        <div class="body">Warm, editorial, timeless. The voice of heritage, mission, and faith. Used on: Hahn Sparkling, Tortuguero Turtles, Flip the Cup, Methuselah, and the Founder &amp; Story pages.</div>
+        <div class="use"><b>Headings:</b> Fraunces 500–700 (optical sizing) &nbsp;·&nbsp; <b>Body:</b> Inter 400–600</div>
+      </div>
+
+      <div class="note"><b>Retire these:</b> Cormorant, Playfair (except Koala), and Georgia are being phased out so the family reads as one. <b>Koala Tea keeps Playfair Display</b> on purpose — it's a mature consumer brand with its own deployed identity. That's an intentional exception, not drift.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">03 · Color</span><h2>One gold, chosen neutrals</h2>
+        <p>The gold is the constant. Each venture then gets one deliberate accent (next section). Two modes — dark for premium, light for utility — both intentional.</p></div>
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:linear-gradient(135deg,#e0c07a,#cba45a)"></div><div class="meta"><b>Signature Gold</b><code>#cba45a → #e0c07a</code></div></div>
+        <div class="sw"><div class="chip" style="background:#0a1120"></div><div class="meta"><b>Deep Navy</b><code>#0a1120</code></div></div>
+        <div class="sw"><div class="chip" style="background:#131f36"></div><div class="meta"><b>Surface</b><code>#131f36</code></div></div>
+        <div class="sw"><div class="chip" style="background:#eaf1fb"></div><div class="meta"><b>Ink (light)</b><code>#eaf1fb</code></div></div>
+        <div class="sw"><div class="chip" style="background:#9fb2cc"></div><div class="meta"><b>Muted</b><code>#9fb2cc</code></div></div>
+        <div class="sw"><div class="chip" style="background:#43c478"></div><div class="meta"><b>Good (semantic)</b><code>#43c478</code></div></div>
+      </div>
+      <div class="note"><b>Fix the gold drift:</b> normalize <code>#c9a24b</code> (Methuselah), <code>#c68f2a</code> (Flip the Cup), and <code>#f2b705</code> (Crystal Coast) → <b>#cba45a</b> so the family's gold is one color, not four near-misses.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">04 · Per-venture accent</span><h2>Distinct where it counts</h2>
+        <p>Same gold, same body font, same faith line — with one deliberate accent color and one type bucket per venture. That's "unified but distinct," made explicit.</p></div>
+      <div class="vtable">
+        <div class="v"><span class="acc" style="background:#5fa0e0"></span><div class="info"><b>Hahn Tech Corp</b><span>Steel blue #5fa0e0 · dark navy</span><span class="tag">SORA</span></div></div>
+        <div class="v"><span class="acc" style="background:#2f81f7"></span><div class="info"><b>Ready Tech Repairs</b><span>Repair blue #2f81f7 · light</span><span class="tag">SORA</span></div></div>
+        <div class="v"><span class="acc" style="background:#dcb877"></span><div class="info"><b>Gold &amp; Silver Buying</b><span>Deep gold #dcb877 · dark</span><span class="tag">SORA</span></div></div>
+        <div class="v"><span class="acc" style="background:#e0a458"></span><div class="info"><b>Ubuntu My Life</b><span>Amber #e0a458 · warm dark</span><span class="tag">SORA</span></div></div>
+        <div class="v"><span class="acc" style="background:#ffd23f"></span><div class="info"><b>No Sweat Electrical</b><span>Electric yellow #ffd23f · dark</span><span class="tag">SORA</span></div></div>
+        <div class="v"><span class="acc" style="background:#7ec8e3"></span><div class="info"><b>Hahn Sparkling</b><span>Ice blue #7ec8e3 · deep navy</span><span class="tag">FRAUNCES</span></div></div>
+        <div class="v"><span class="acc" style="background:#0e7c86"></span><div class="info"><b>Tortuguero Turtles</b><span>Sea-teal #0e7c86 · dark teal</span><span class="tag">FRAUNCES</span></div></div>
+        <div class="v"><span class="acc" style="background:#1f7a52"></span><div class="info"><b>Flip the Cup</b><span>Forest #1f7a52 · cream</span><span class="tag">FRAUNCES</span></div></div>
+        <div class="v"><span class="acc" style="background:#7fb09f"></span><div class="info"><b>Methuselah</b><span>Sage #7fb09f · green-black</span><span class="tag">FRAUNCES</span></div></div>
+        <div class="v"><span class="acc" style="background:#0e7c8a"></span><div class="info"><b>Crystal Coast (Pier)</b><span>Ocean #0e7c8a · foam light</span><span class="tag">FRAUNCES</span></div></div>
+        <div class="v" style="border-color:var(--gold)"><span class="acc" style="background:linear-gradient(135deg,#236D5E,#D2DF64)"></span><div class="info"><b>Koala Tea (standalone)</b><span>Teal #236D5E + lime #D2DF64 · cream</span><span class="tag">PLAYFAIR · own system</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">05 · Logos &amp; assets</span><h2>Use the real marks</h2></div>
+      <ul class="clean">
+        <li><b>Deploy the vector logos</b> — <code>hahn-tech-logo.svg</code> and <code>koala-tea-logo.svg</code> (in Business/brand-logos/). They're crisp at any size and on-brand. They should be the actual header logos.</li>
+        <li><b>Never ship a Looka screenshot</b> as a live logo — they include browser chrome. Download the transparent SVG/PNG from Looka first if you want one of those concepts.</li>
+        <li><b>Favicon:</b> the circle logo PNG for business sites; a single emoji-SVG (⚡ 💧 🐢 🌊) for lifestyle sites — every site gets one.</li>
+        <li><b>OG share image:</b> every site needs a 1200×630 <code>og:image</code> so it never shows a blank card when texted or shared.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">06 · Copy-paste tokens</span><h2>Start every new site from these</h2>
+        <p>Drop the right block into a new site's <code>:root</code> and you're already on-brand.</p></div>
+      <pre><code><span class="tok-c">/* ---- HAHN BUSINESS bucket (hub, repairs, gold, ubuntu, electrical, AI/POS) ---- */</span>
+:root{
+  --gold:#cba45a; --gold-2:#e0c07a;
+  --bg:#0a1120; --surface:#131f36; --line:#24344f;
+  --ink:#eaf1fb; --muted:#9fb2cc;
+  --accent:#5fa0e0;              <span class="tok-c">/* swap per venture (see §04) */</span>
+  --display:"Sora",sans-serif; --body:"Inter",sans-serif;
+}
+
+<span class="tok-c">/* ---- HAHN LIFESTYLE/FAITH bucket (sparkling, turtles, flipthecup, methuselah, founder/story) ---- */</span>
+:root{
+  --gold:#cba45a; --gold-2:#e0c07a;
+  --bg:#0b1a17; --surface:#122a26; --line:#254a44;
+  --ink:#eef3f0; --muted:#9fb4ac;
+  --accent:#7fb09f;             <span class="tok-c">/* swap per venture (see §04) */</span>
+  --display:"Fraunces",Georgia,serif; --body:"Inter",sans-serif;
+}</code></pre>
+      <div class="note"><b>The rule of thumb:</b> better every day, but never confusing or cluttered. One gold, one body font, one of two display fonts, one accent per venture, one clear call to action. When in doubt, subtract.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div>Hahn Family Brand System · a <a href="https://hahntechcorp.com">Hahn Technologies Corp</a> standard · New Bern, NC</div>
+      <div class="sdg">Soli Deo Gloria ✝️</div>
+    </div>
+  </footer>
+</body>
+</html>
