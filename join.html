@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the Hahn Team — Careers at Hahn Technologies Corp</title>
+  <meta name="description" content="Join the Hahn family of companies in New Bern, NC. We're hiring for our Tech &amp; Repair team (Ready Tech Repairs / Hahn Tech) and building a Skilled Trades &amp; Contractors bench for electrical and field work." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://hahntechcorp.com/join.html" />
+  <meta name="theme-color" content="#0a1120" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hahn Technologies Corp" />
+  <meta property="og:title" content="Join the Hahn Team — Careers at Hahn Technologies Corp" />
+  <meta property="og:description" content="We're hiring for Tech &amp; Repair and building a Skilled Trades &amp; Contractors bench. Text (252) 253-9629 to apply." />
+  <meta property="og:url" content="https://hahntechcorp.com/join.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/png" href="hahn-tech-logo-circle.png" />
+  <link rel="apple-touch-icon" href="hahn-tech-logo-circle.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a1120;
+      --bg-2: #0e1728;
+      --surface: #131f36;
+      --surface-2: #17253f;
+      --line: #24344f;
+      --ink: #eaf1fb;
+      --muted: #9fb2cc;
+      --steel: #5fa0e0;
+      --steel-light: #8fc0f0;
+      --gold: #cba45a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg); color: var(--ink); line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: "Sora", system-ui, sans-serif; line-height: 1.15; letter-spacing: -0.01em; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+    .eyebrow { text-transform: uppercase; letter-spacing: .2em; font-size: .74rem; font-weight: 600; color: var(--gold); }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10,17,32,.82); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { display: flex; align-items: center; gap: .7rem; font-family: "Sora"; font-weight: 700; font-size: 1.05rem; }
+    .brand img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
+    .brand small { display: block; font-family: "Inter"; font-weight: 500; font-size: .66rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    nav.links a { color: var(--muted); font-size: .92rem; font-weight: 500; margin-left: 1.6rem; transition: color .2s; }
+    nav.links a:hover { color: var(--steel-light); }
+    @media (max-width: 700px) { nav.links a:not(:last-child) { display: none; } }
+
+    .btn {
+      display: inline-block; font-weight: 600; font-size: .92rem;
+      padding: .7rem 1.4rem; border-radius: 999px; transition: transform .15s, background .2s, border-color .2s;
+    }
+    .btn-primary { background: var(--steel); color: #06101f; font-weight: 700; box-shadow: 0 4px 16px rgba(95,160,224,.35); border: none; cursor: pointer; }
+    .btn-primary:hover { background: var(--steel-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(143,192,240,.45); }
+    .btn-ghost { border: 1px solid rgba(143,192,240,.55); color: var(--ink); background: rgba(95,160,224,.10); }
+    .btn-ghost:hover { border-color: var(--steel-light); background: rgba(95,160,224,.18); transform: translateY(-1px); }
+
+    .hero { position: relative; overflow: hidden; padding: clamp(3rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3rem); text-align: center; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(60% 55% at 50% 0%, rgba(95,160,224,.18), transparent 60%);
+    }
+    .hero-inner { position: relative; max-width: 62ch; margin: 0 auto; }
+    .hero h1 { font-size: clamp(2.1rem, 5vw, 3.2rem); font-weight: 700; margin: 1rem 0 1.1rem; }
+    .hero p.lead { color: var(--muted); font-size: clamp(1.02rem, 2vw, 1.15rem); }
+
+    section { padding: clamp(2.4rem, 6vw, 4rem) 0; }
+    .band { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
+    .card {
+      background: linear-gradient(180deg, var(--surface), var(--bg-2));
+      border: 1px solid var(--line); border-radius: 18px; padding: 2rem;
+      transition: transform .18s, border-color .2s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--steel); }
+    .card .tag { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+    .card h3 { font-size: 1.35rem; font-weight: 600; margin: .6rem 0 .7rem; }
+    .card p { color: var(--muted); font-size: .98rem; }
+    .card ul { color: var(--muted); font-size: .95rem; margin: .9rem 0 0 1.1rem; }
+    .card ul li { margin-bottom: .35rem; }
+    .card .apply-btn { margin-top: 1.4rem; }
+
+    .section-head { max-width: 640px; margin: 0 auto 2.4rem; text-align: center; }
+    .section-head h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 600; margin: .7rem 0 .7rem; }
+    .section-head p { color: var(--muted); font-size: 1.02rem; }
+
+    .lead-form { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 1.9rem; max-width: 640px; margin: 0 auto; }
+    .lead-form .fld { margin-bottom: 1rem; }
+    .lead-form .fld.two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 480px) { .lead-form .fld.two { grid-template-columns: 1fr; } }
+    .lead-form label { display: block; font-size: .8rem; color: var(--muted); margin-bottom: .35rem; font-weight: 500; }
+    .lead-form .req { color: var(--gold); }
+    .lead-form input, .lead-form select, .lead-form textarea {
+      width: 100%; background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px;
+      color: var(--ink); padding: .7rem .8rem; font-size: .95rem; font-family: inherit;
+    }
+    .lead-form textarea { min-height: 70px; resize: vertical; }
+    .lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus { outline: none; border-color: var(--steel); }
+    .radio-row { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: .3rem; }
+    .radio-chip { display: flex; align-items: center; gap: .5rem; background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; padding: .6rem .9rem; font-size: .92rem; cursor: pointer; }
+    .radio-chip input { width: 16px; height: 16px; accent-color: var(--steel); }
+    .form-note { font-size: .8rem; color: var(--muted); margin-top: .9rem; }
+    .ok-box { display: none; background: var(--surface); border: 1px solid #43c478; border-radius: 18px; padding: 2.2rem; text-align: center; max-width: 640px; margin: 0 auto; }
+    .ok-box h3 { color: #43c478; margin-bottom: .5rem; }
+    .ok-box p { color: var(--muted); }
+
+    footer { border-top: 1px solid var(--line); padding: 2.2rem 0; color: var(--muted); font-size: .85rem; }
+    .foot { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center; text-align: center; }
+    @media (max-width: 640px) { .foot { justify-content: center; text-align: center; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <img src="hahn-tech-rooster.jpeg" alt="Hahn Technologies Corp" />
+        <span>Hahn Technologies<small>Corp</small></span>
+      </a>
+      <nav class="links">
+        <a href="index.html#ventures">Ventures</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="join.html" style="color:var(--gold);font-weight:700">We're Hiring</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Careers · New Bern, NC &amp; Beyond</span>
+      <h1>Join the Hahn Team</h1>
+      <p class="lead">
+        One family, many ventures, one mission. We're growing our tech &amp; repair
+        crew and building a bench of skilled trades &amp; contractors — honest work,
+        real pay, and a team that treats people like family.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two paths -->
+  <section id="paths">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Where Do You Fit?</span>
+        <h2>Two ways to join</h2>
+        <p>Pick the lane that matches your skills — then text to apply. We answer.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Ready Tech Repairs · Hahn Tech</span>
+          <h3>Tech &amp; Repair Team</h3>
+          <p>Phone and computer repair, data recovery, device setup, and general tech help for our Ready Tech Repairs and Hahn Tech customers across New Bern and Eastern NC.</p>
+          <ul>
+            <li>Screen, battery &amp; hardware repair</li>
+            <li>Data backup, recovery &amp; transfer</li>
+            <li>E-waste intake &amp; device buyback</li>
+            <li>Customer-facing, detail-oriented work</li>
+          </ul>
+          <a class="btn btn-primary apply-btn" href="sms:+12522539629" target="_blank" rel="noopener">💬 Text to apply: (252) 253-9629</a>
+        </div>
+        <div class="card">
+          <span class="tag">No Sweat Electrical · Field Crew</span>
+          <h3>Skilled Trades &amp; Contractors</h3>
+          <p>Building out our electrical and field-work bench alongside Aaron Rugg's crew — licensed electricians, apprentices, and reliable contractors for panel upgrades, EV chargers, generators, and everyday service calls.</p>
+          <ul>
+            <li>Licensed electricians &amp; apprentices</li>
+            <li>General contractors &amp; skilled trades</li>
+            <li>Reliable, punctual, safety-first</li>
+            <li>Work across New Bern &amp; the Crystal Coast</li>
+          </ul>
+          <a class="btn btn-primary apply-btn" href="sms:+12522539629" target="_blank" rel="noopener">💬 Text to apply: (252) 253-9629</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply form -->
+  <section class="band" id="apply">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Prefer To Write It Out?</span>
+        <h2>Send us your info</h2>
+        <p>Fill this out and David gets it directly — or just text if that's easier.</p>
+      </div>
+      <form id="join-form" class="lead-form" action="https://formspree.io/f/xbdvqvrk" method="POST">
+        <input type="hidden" name="_subject" value="New job application — hahntechcorp.com/join" />
+        <div class="fld">
+          <label for="j-name">Your name <span class="req">*</span></label>
+          <input id="j-name" name="name" type="text" required />
+        </div>
+        <div class="fld two">
+          <div>
+            <label for="j-phone">Best phone <span class="req">*</span></label>
+            <input id="j-phone" name="phone" type="tel" required />
+          </div>
+          <div>
+            <label for="j-email">Email</label>
+            <input id="j-email" name="email" type="email" />
+          </div>
+        </div>
+        <div class="fld">
+          <label>Which team? <span class="req">*</span></label>
+          <div class="radio-row">
+            <label class="radio-chip"><input type="radio" name="team" value="Tech & Repair Team" required /> Tech &amp; Repair Team</label>
+            <label class="radio-chip"><input type="radio" name="team" value="Skilled Trades & Contractors" /> Skilled Trades &amp; Contractors</label>
+            <label class="radio-chip"><input type="radio" name="team" value="Not sure yet" /> Not sure yet</label>
+          </div>
+        </div>
+        <div class="fld">
+          <label for="j-exp">Relevant experience</label>
+          <textarea id="j-exp" name="experience" placeholder="Tell us what you've done — repair shop, licensed trade, general handy work, customer service, etc."></textarea>
+        </div>
+        <!-- honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+        <button class="btn btn-primary" type="submit" id="j-btn" style="width:100%">Send my application →</button>
+        <p class="form-note" id="j-err" style="color:#e08066;display:none">Something went wrong — please text David directly at (252) 253-9629.</p>
+        <p class="form-note">Prefer to talk now? Text <a href="sms:+12522539629" style="color:var(--gold);font-weight:600">(252) 253-9629</a>. We answer.</p>
+      </form>
+      <div class="ok-box" id="j-ok">
+        <h3>🙏 Got it — thank you!</h3>
+        <p>Your application is on its way to David. He'll reach out personally, usually the same day. If it's urgent, text <a href="sms:+12522539629" style="color:var(--gold);font-weight:600">(252) 253-9629</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>&copy; <span id="yr">2026</span> Hahn Technologies Corp · New Bern, NC</div>
+      <div>
+        Text/Call <a href="sms:+12522539629" style="color:var(--gold);font-weight:600">(252) 253-9629</a>
+        &middot; Call <a href="tel:+12526266236" style="color:inherit">(252) 626-6236</a>
+        &middot; <a href="mailto:dhahn402@gmail.com" style="color:inherit">dhahn402@gmail.com</a>
+      </div>
+      <div><a href="index.html" style="color:var(--steel-light);font-weight:600">← Back to Hahn Technologies Corp</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var f = document.getElementById('join-form');
+    f.addEventListener('submit', function (e) {
+      var hp = f.querySelector('[name=_gotcha]');
+      if (hp && hp.value) { e.preventDefault(); return; }
+      e.preventDefault();
+      var btn = document.getElementById('j-btn'); btn.disabled = true; btn.textContent = 'Sending…';
+      fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
+        .then(function (r) {
+          if (r.ok) { f.style.display = 'none'; document.getElementById('j-ok').style.display = 'block'; window.scrollTo(0, 0); }
+          else { throw new Error(); }
+        })
+        .catch(function () {
+          document.getElementById('j-err').style.display = 'block';
+          btn.disabled = false; btn.textContent = 'Send my application →';
+        });
+    });
+  </script>
+
+<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9316e0db5804345a3aeb1fd7e233c25"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
