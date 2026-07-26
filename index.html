@@ -337,6 +337,18 @@
     </div>
   </section>
 
+  <!-- Trust strip — honest proof points -->
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1rem 0">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.9rem 2.2rem;text-align:center">
+        <span style="color:var(--ink);font-size:.92rem;font-weight:600"><span style="color:var(--steel-light)">📍</span> Local — New Bern, NC</span>
+        <span style="color:var(--ink);font-size:.92rem;font-weight:600"><span style="color:var(--steel-light)">👋</span> You always talk to a Hahn</span>
+        <span style="color:var(--ink);font-size:.92rem;font-weight:600"><span style="color:var(--steel-light)">🆓</span> Free first consultation</span>
+        <span style="color:var(--ink);font-size:.92rem;font-weight:600"><span style="color:var(--gold)">🙏</span> Faith-driven, honest work</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Services For You (customer-first) -->
   <section class="band" id="work-with-us" style="border-top:1px solid var(--line)">
     <div class="wrap">
@@ -963,6 +975,16 @@
       audio.addEventListener('play',  function(){ setPlaying(true); });
     })();
   </script>
+
+  <!-- Sticky text CTA — phone-first leads -->
+  <a href="sms:+12526266236?&body=Hi%20David%2C%20I%27m%20interested%20in%20Hahn%20Tech%20%E2%80%94%20" id="sticky-text" aria-label="Text Hahn Technologies Corp">
+    <span aria-hidden="true">💬</span> Text us
+  </a>
+  <style>
+    #sticky-text{position:fixed;right:16px;bottom:16px;z-index:90;display:inline-flex;align-items:center;gap:.45rem;background:linear-gradient(180deg,var(--steel-light),var(--steel));color:#08131f;font-weight:800;font-size:.95rem;padding:.75rem 1.25rem;border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.45),0 0 0 1px rgba(143,192,240,.4);text-decoration:none;transition:transform .15s}
+    #sticky-text:hover{transform:translateY(-2px)}
+    @media(min-width:1024px){#sticky-text{right:22px;bottom:22px}}
+  </style>
 
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9316e0db5804345a3aeb1fd7e233c25"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
