@@ -986,6 +986,36 @@
     @media(min-width:1024px){#sticky-text{right:22px;bottom:22px}}
   </style>
 
+  <!-- Best-in-class polish: graceful scroll-reveal + micro-interactions + keyboard a11y -->
+  <style>
+    /* reveal only when JS is active (no-JS = fully visible, never hidden) */
+    .js .reveal-init{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+    .js .reveal-init.in{opacity:1;transform:none}
+    a,button,.btn{transition:transform .16s ease,box-shadow .22s ease,background .2s ease,color .2s ease,border-color .2s ease}
+    a:focus-visible,button:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+    .btn:hover{transform:translateY(-2px)}
+    @media (prefers-reduced-motion:reduce){
+      .js .reveal-init,.js .reveal-init.in{opacity:1 !important;transform:none !important;transition:none}
+      a,button,.btn{transition:none}
+    }
+  </style>
+  <script>
+    document.documentElement.classList.add('js');
+    (function(){
+      var secs = Array.prototype.slice.call(document.querySelectorAll('section'))
+        .filter(function(s){ return !s.classList.contains('hero'); });
+      secs.forEach(function(s){ s.classList.add('reveal-init'); });
+      function showAll(){ secs.forEach(function(s){ s.classList.add('in'); }); }
+      if(!('IntersectionObserver' in window)){ showAll(); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+      secs.forEach(function(s){ io.observe(s); });
+      // bulletproof safety net: reveal everything after 2.5s no matter what
+      setTimeout(showAll, 2500);
+    })();
+  </script>
+
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9316e0db5804345a3aeb1fd7e233c25"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
