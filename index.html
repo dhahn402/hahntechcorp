@@ -823,6 +823,16 @@
             <label for="lf-name">Your name</label>
             <input id="lf-name" type="text" placeholder="First &amp; last name" />
           </div>
+          <div class="fld two">
+            <div>
+              <label for="lf-phone">Best number to reach you</label>
+              <input id="lf-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(252) 555-0123" />
+            </div>
+            <div>
+              <label for="lf-email">Email (optional)</label>
+              <input id="lf-email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" />
+            </div>
+          </div>
           <div class="fld">
             <label for="lf-service">What can we help with?</label>
             <select id="lf-service">
@@ -867,6 +877,7 @@
             <button type="button" class="btn btn-primary" onclick="sendLead('sms')">💬 Text my request</button>
             <button type="button" class="btn btn-ghost" onclick="sendLead('email')">✉️ Email instead</button>
           </div>
+          <p class="form-note" id="lead-nudge" style="display:none;color:var(--gold);font-weight:600">📱 Add a number or email so David can get back to you — then tap again.</p>
           <p class="form-note" id="lead-thanks" style="display:none;color:var(--gold);font-weight:600">🙏 Got it — your request is on its way to David. He'll reach out personally, usually the same day.</p>
           <p class="form-note">We use this to send you the fastest, most useful reply — and to make sure we're the right fit before we take your time or money.</p>
           <p class="form-note">Paying is simple: after we talk, we text or email you a <strong style="color:var(--ink)">secure link to pay by card</strong> — nothing to set up. Want to spread it out? You can use <strong style="color:var(--ink)">Klarna, Affirm, or a credit line</strong> to finance it and pay the same invoice, no extra steps on your end.</p>
@@ -965,14 +976,27 @@
     document.getElementById('yr').textContent = new Date().getFullYear();
     function sendLead(mode) {
       var g = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
-      var name = g('lf-name'), svc = g('lf-service'), when = g('lf-when'), budget = g('lf-budget'), msg = g('lf-msg');
+      var name = g('lf-name'), phone = g('lf-phone'), email = g('lf-email'),
+          svc = g('lf-service'), when = g('lf-when'), budget = g('lf-budget'), msg = g('lf-msg');
       var lines = ['New request via hahntechcorp.com'];
       if (name)   lines.push('Name: ' + name);
+      if (phone)  lines.push('Phone: ' + phone);
+      if (email)  lines.push('Email: ' + email);
       if (svc)    lines.push('Service: ' + svc);
       if (when)   lines.push('Timeline: ' + when);
       if (budget) lines.push('Budget: ' + budget);
       if (msg)    lines.push('Details: ' + msg);
       var body = lines.join('\n');
+      // Nudge once for a contact detail — without it the server-side capture
+      // below has no way to reach them. Never blocks: a second tap goes through.
+      if (!phone && !email && !window.__leadNudged) {
+        window.__leadNudged = true;
+        var hint = document.getElementById('lead-nudge');
+        if (hint) { hint.style.display = 'block'; }
+        var pf = document.getElementById('lf-phone');
+        if (pf) { pf.focus(); }
+        return;
+      }
       // Capture the lead server-side first so it's never lost, even if the
       // visitor never taps "send" in their mail/text app.
       try {
@@ -980,8 +1004,10 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
-            name: name, service: svc, timeline: when, budget: budget, details: msg,
-            _subject: 'New request from hahntechcorp.com'
+            name: name, phone: phone, email: email,
+            service: svc, timeline: when, budget: budget, details: msg,
+            _replyto: email || undefined,
+            _subject: 'New request from hahntechcorp.com' + (phone ? ' — ' + phone : '')
           })
         }).then(function () {
           var el = document.getElementById('lead-thanks');
