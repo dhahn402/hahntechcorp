@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Hahn Technologies Corp">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.55" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b2c4a"/><stop offset="1" stop-color="#0a1120"/>
+    </linearGradient>
+    <!-- userSpaceOnUse: the pins are axis-aligned lines with a zero-area bounding
+         box, and an objectBoundingBox gradient on those never paints. -->
+    <linearGradient id="chip" gradientUnits="userSpaceOnUse" x1="102" y1="102" x2="410" y2="410">
+      <stop offset="0" stop-color="#6fb2ee"/><stop offset="1" stop-color="#2ed9d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <g stroke="url(#chip)" fill="none" stroke-linecap="round">
+    <g stroke-width="26.0">
+      <line x1="196.0" y1="142.0" x2="196.0" y2="102.0"/><line x1="196.0" y1="370.0" x2="196.0" y2="410.0"/><line x1="142.0" y1="196.0" x2="102.0" y2="196.0"/><line x1="370.0" y1="196.0" x2="410.0" y2="196.0"/><line x1="256.0" y1="142.0" x2="256.0" y2="102.0"/><line x1="256.0" y1="370.0" x2="256.0" y2="410.0"/><line x1="142.0" y1="256.0" x2="102.0" y2="256.0"/><line x1="370.0" y1="256.0" x2="410.0" y2="256.0"/><line x1="316.0" y1="142.0" x2="316.0" y2="102.0"/><line x1="316.0" y1="370.0" x2="316.0" y2="410.0"/><line x1="142.0" y1="316.0" x2="102.0" y2="316.0"/><line x1="370.0" y1="316.0" x2="410.0" y2="316.0"/>
+    </g>
+    <rect x="142.0" y="142.0" width="228.0" height="228.0" rx="34.0" stroke-width="30.0"/>
+    <rect x="212.0" y="212.0" width="88.0" height="88.0" rx="12.0" stroke-width="26.0"/>
+  </g>
+</svg>
