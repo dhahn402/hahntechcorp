@@ -1,2 +1,18 @@
 .DS_Store
+
+# ⚠️ This repo IS the website, so an ignored image is a 404 in production.
+# A blanket *.png here silently blocked favicon-32.png and icon-180.png from ever
+# deploying: index.html referenced them, the commit looked clean, and the live site
+# served 404 for both. Keep the blanket rule so stray screenshots stay out, but
+# every image the site actually serves must be listed below.
 *.png
+!favicon-32.png
+!icon-180.png
+!hahn-tech-icon-512.png
+!hahn-tech-logo-square-1024.png
+!hahn-tech-logo-circle.png
+!hahn-tech-mark-clean.png
+!marketing/*.png
+
+# Local-only backups of replaced assets — kept on disk, never published.
+_old-icons-*/
