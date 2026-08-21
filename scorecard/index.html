@@ -150,8 +150,10 @@ document.getElementById('f').addEventListener('submit', async (e) => {
         <h3>${d.moreFindings} more finding${d.moreFindings === 1 ? '' : 's'} we didn't show</h3>
         <p>${esc(d.fullReport.includes)}</p>
         <a class="btn" href="sms:2522539629">Text David &mdash; (252) 253-9629</a>
-        <p class="muted" style="margin:12px 0 0">Full report is $${d.fullReport.price}. The
-        conversation is free, and if the fixes are simple I'll just tell you how to do them.</p>
+        <p class="muted" style="margin:12px 0 0">Full report is $${d.fullReport.price}, and it
+        comes off your bill if you build with us. The conversation is free, and if the fixes are
+        simple I'll just tell you how to do them.
+        <a href="/audit/">What's in the full audit &rarr;</a></p>
       </div>` : `<div class="card cta">
         <h3>Your site is in good shape</h3>
         <p>Nothing here needs selling to you. If you ever want a second pair of eyes on the Google
