@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Websites for Artists — Hahn Technologies Corp | New Bern, NC</title>
+<meta name="description" content="Websites that actually sell art. Originals, prints and cards with a real checkout, built and maintained for painters in New Bern and Eastern NC. Free site review.">
+<link rel="canonical" href="https://hahntechcorp.com/art/">
+<meta property="og:title" content="Websites for Artists — Hahn Technologies Corp">
+<meta property="og:description" content="Most artist websites show the work but cannot sell it. We fix that — originals, prints and cards, with a checkout that works.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon-32.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Websites for Artists",
+"serviceType":"Website design and e-commerce for visual artists",
+"provider":{"@type":"LocalBusiness","name":"Hahn Technologies Corp",
+"telephone":"+1-252-626-6236","email":"hahntechnologiescorp@gmail.com",
+"address":{"@type":"PostalAddress","addressLocality":"New Bern","addressRegion":"NC","addressCountry":"US"}},
+"areaServed":"Eastern North Carolina"}
+</script>
+<style>
+  :root{
+    --bg:#0a1120; --surface:#131f36; --line:#24344f; --ink:#eaf1fb; --muted:#9fb2cc;
+    --steel:#5fa0e0; --steel-light:#8fc0f0; --gold:#cba45a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+       font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
+  img{max-width:100%; display:block;}
+  a{color:var(--steel-light);}
+  .wrap{max-width:1060px; margin:0 auto; padding:0 22px;}
+
+  nav{border-bottom:1px solid var(--line); background:rgba(10,17,32,.94); position:sticky; top:0; z-index:40;
+      backdrop-filter:blur(8px);}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; gap:14px;
+            padding:13px 22px; flex-wrap:wrap;}
+  nav .b{font-weight:700; color:var(--ink); text-decoration:none; font-size:17px;}
+  nav .b span{color:var(--gold);}
+  nav a.c{background:var(--gold); color:#12203a; padding:9px 17px; border-radius:3px;
+          text-decoration:none; font-weight:700; font-size:14.5px;}
+
+  header{padding:66px 0 56px; border-bottom:1px solid var(--line);}
+  .eyebrow{font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+  h1{font-size:clamp(31px,4.6vw,50px); line-height:1.1; margin:14px 0 16px; letter-spacing:-.01em;}
+  header p.lede{font-size:19px; color:var(--muted); max-width:60ch; margin:0 0 26px;}
+  .btns{display:flex; gap:12px; flex-wrap:wrap;}
+  .btn{padding:13px 24px; border-radius:3px; text-decoration:none; font-weight:700; font-size:15px;
+       display:inline-block;}
+  .btn-p{background:var(--gold); color:#12203a;}
+  .btn-s{border:1px solid var(--line); color:var(--ink);}
+  .btn-s:hover{border-color:var(--steel);}
+
+  section{padding:58px 0; border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(24px,3.2vw,33px); line-height:1.18; margin:0 0 14px;}
+  .lede{font-size:18px; color:var(--muted); max-width:62ch;}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; margin-top:30px;}
+  .card{background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--steel);
+        padding:22px 20px;}
+  .card.gold{border-top-color:var(--gold);}
+  .card h3{margin:0 0 8px; font-size:18px; color:var(--ink);}
+  .card p{margin:0; color:var(--muted); font-size:15px; line-height:1.55;}
+  .card .big{font-size:31px; font-weight:700; color:var(--gold); margin:2px 0 8px;}
+  .card .big small{font-size:14px; color:var(--muted); font-weight:400;}
+
+  ul.chk{list-style:none; padding:0; margin:22px 0 0;}
+  ul.chk li{position:relative; padding-left:28px; margin-bottom:11px; color:var(--muted); font-size:16px;}
+  ul.chk li::before{content:"✓"; position:absolute; left:0; top:0; color:var(--gold); font-weight:700;}
+  ul.chk li b{color:var(--ink);}
+
+  table{width:100%; border-collapse:collapse; margin-top:24px; font-size:15px;}
+  th{background:var(--surface); color:var(--gold); text-align:left; padding:11px 13px;
+     font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; border-bottom:1px solid var(--line);}
+  td{border-bottom:1px solid var(--line); padding:12px 13px; vertical-align:top; color:var(--muted);}
+  td.l{color:var(--ink); font-weight:700; width:26%;}
+  td.us{color:var(--gold); font-weight:700;}
+
+  .quote{border-left:3px solid var(--gold); padding:6px 0 6px 20px; margin:26px 0;
+         font-size:20px; line-height:1.5; color:var(--ink); font-style:italic;}
+  .quote cite{display:block; font-style:normal; font-size:14px; color:var(--muted); margin-top:8px;}
+
+  .soon{background:var(--surface); border:1px dashed var(--line); padding:26px 24px; text-align:center;
+        margin-top:26px; color:var(--muted);}
+  .soon b{color:var(--ink); display:block; font-size:18px; margin-bottom:5px;}
+
+  .showcase{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px;
+            margin-top:26px;}
+  .showcase figure{margin:0; background:var(--surface); border:1px solid var(--line); padding:9px;}
+  .showcase img{width:100%; height:230px; object-fit:cover;}
+  .case{background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--gold);
+        padding:22px 24px; margin-top:18px;}
+  .case h3{margin:0 0 10px; font-size:19px; color:var(--gold);}
+  .case p{color:var(--muted); font-size:15.5px; margin:0 0 10px;}
+  .case p.q{font-style:italic; color:var(--ink); border-top:1px solid var(--line); padding-top:12px;
+            margin-top:14px; margin-bottom:0;}
+  .case p.q span{display:block; font-style:normal; font-size:13.5px; color:var(--muted); margin-top:6px;}
+
+  .cta{background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--gold);
+       padding:28px 26px; margin-top:8px;}
+  .cta h2{margin-bottom:8px;}
+
+  footer{padding:30px 0; color:var(--muted); font-size:14px; text-align:center;}
+  footer .v{font-style:italic; font-size:13px; color:#7d8ea0; margin-top:9px;}
+
+  @media(max-width:640px){ section{padding:42px 0;} header{padding:44px 0 38px;} }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="b" href="/">Hahn <span>Technologies Corp</span></a>
+  <a class="c" href="#start">Free site review</a>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="eyebrow">Websites for artists · New Bern, North Carolina</div>
+  <h1>Your paintings deserve<br>better than a contact form.</h1>
+  <p class="lede">Most artist websites show the work beautifully and then ask the buyer to fill in
+  a form and wait. Every sale ends up depending on somebody being patient. We build the other kind —
+  where a card, a print or an original is bought in one click, and the money goes straight to you.</p>
+  <div class="btns">
+    <a class="btn btn-p" href="#start">Get a free review of your site</a>
+    <a class="btn btn-s" href="#what">See what we build</a>
+  </div>
+</div></header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The problem</div>
+    <h2>Painters have the hardest job online</h2>
+    <p class="lede">A photograph of a painting loses its scale, its texture and its true color. So
+    an artist's site has to work twice as hard as anyone else's — and most of them are not even
+    doing the easy part.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Nobody can buy anything</h3>
+        <p>Prices on the page, no checkout anywhere. The visitor has to email and wait, and most of
+        them simply do not.</p>
+      </div>
+      <div class="card">
+        <h3>The town is never named</h3>
+        <p>Google cannot show an artist to somebody searching "art near me" if the website never
+        says where the studio is. This is the most common miss we find, by far.</p>
+      </div>
+      <div class="card">
+        <h3>The pictures are invisible</h3>
+        <p>Search engines cannot see a painting — they read the description attached to it. On most
+        artist sites, most images have none.</p>
+      </div>
+      <div class="card">
+        <h3>Prints are left on the table</h3>
+        <p>An original sells once. A print sells the same painting for years, and cards sell it
+        every week — but only if there is somewhere to buy them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <div class="eyebrow">What we build</div>
+    <h2>A gallery, a shop and a story — in one place</h2>
+    <ul class="chk">
+      <li><b>A real shop.</b> Originals, limited prints and hand-finished cards, with a checkout
+        that pays into your own account. We never hold your money.</li>
+      <li><b>Print-on-demand, set up for you.</b> Somebody orders, the printer makes that one copy
+        and posts it. No inventory in your spare room, nothing paid before a sale.</li>
+      <li><b>Collections, not one long wall.</b> Sorted the way a buyer thinks — by subject, so
+        they find what they came for instead of scrolling past it.</li>
+      <li><b>Your story, told properly.</b> The years before the brushes, the teaching, the whole
+        thing. It is what turns a browser into a buyer, and almost nobody bothers.</li>
+      <li><b>Workshops and commissions.</b> Teaching is the highest-margin work an artist does and
+        needs no materials. It gets its own section, with inquiries coming to you.</li>
+      <li><b>Local search, done right.</b> Your town on every page, artist information Google can
+        read, and a phone number people can tap.</li>
+      <li><b>Watched every single day.</b> Uptime, security, certificates and broken links, on the
+        same automatic check that already watches more than twenty sites.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">What it costs</div>
+    <h2>Priced so it pays for itself</h2>
+    <div class="grid">
+      <div class="card gold">
+        <h3>A look at your site</h3>
+        <div class="big">Free</div>
+        <p>We run your website the way Google reads it and tell you exactly what is working and
+        what is costing you. Yours to keep. Take it to anybody you like.</p>
+      </div>
+      <div class="card">
+        <h3>The written diagnostic</h3>
+        <div class="big">$197</div>
+        <p>Everything broken, everything missing, and what to fix first — in order, in plain
+        English. Comes off your first month if you go ahead.</p>
+      </div>
+      <div class="card">
+        <h3>Built &amp; looked after</h3>
+        <div class="big">$50<small> / month</small></div>
+        <p>Site built, hosted, secured and maintained. New work added, sold work marked. A minimum,
+        not a cap.</p>
+      </div>
+      <div class="card">
+        <h3>Plus a share of sales</h3>
+        <div class="big">15%</div>
+        <p>Only on what the website sells. Nothing on work you sell in person, at a show, or
+        through a gallery. A gallery takes 40&ndash;50%.</p>
+      </div>
+    </div>
+
+    <div class="quote">
+      "We would rather be paid out of what you sell than what you owe. If the site never sells
+      anything, that is our risk — not yours."
+      <cite>David Hahn · Hahn Technologies Corp</cite>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Us, honestly</div>
+    <h2>Why we are worth a phone call</h2>
+    <table>
+      <tbody>
+        <tr><td class="l">Who answers</td><td>A person in New Bern, eight minutes away. Not a ticket queue in another time zone.</td></tr>
+        <tr><td class="l">What we run now</td><td class="us">More than twenty live websites, checked automatically every day.</td></tr>
+        <tr><td class="l">Who owns your domain</td><td>You do — in your name, transferable at any time, at cost. Nothing is ever held hostage.</td></tr>
+        <tr><td class="l">Who holds your money</td><td>You do. The checkout pays into your account. We invoice; we never deduct.</td></tr>
+        <tr><td class="l">What we promise</td><td>That everything we find gets fixed, and somebody is watching so it never quietly stops working.</td></tr>
+        <tr><td class="l">What we will not promise</td><td class="us">A number of sales, an amount of traffic, or the top spot on Google. Nobody can promise those honestly.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Recent work</div>
+    <h2>Built for a New Bern painter</h2>
+    <p class="lede">Our first artist site — a watercolorist with a lifetime behind her and no way
+    for anyone to buy a card.</p>
+    <div class="showcase">
+      <figure><img loading="lazy" src="img/jean-1.jpg" alt="Watercolor butterfly by Jean Richards"></figure>
+      <figure><img loading="lazy" src="img/jean-2.jpg" alt="Watercolor wildflowers by Jean Richards"></figure>
+      <figure><img loading="lazy" src="img/jean-3.jpg" alt="Watercolor butterfly on a cornflower by Jean Richards"></figure>
+    </div>
+
+    <div class="case">
+      <h3>Jean Richards — jeanrichardsart.com</h3>
+      <p>Painting since 1998. Her old site showed a dozen paintings with prices on them and
+      <strong>no way to buy any of them</strong>. It never once mentioned New Bern, so nobody
+      searching locally could find her. Two of six pictures had descriptions, so the rest were
+      invisible to Google.</p>
+      <p>She now has a gallery sorted into collections, hand-finished cards and prints with a real
+      checkout, a workshops section for the teaching she actually wants to do, and her whole life
+      written down — Wyoming in 1957 through to New Bern today.</p>
+      <p class="q">"An expert once told me I had done all the work and now needed a marketing
+      manager. You are probably the first one that's qualified."<span>— Jean Richards</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="start">
+  <div class="wrap">
+    <div class="cta">
+      <div class="eyebrow">Start here</div>
+      <h2>Send us your website address</h2>
+      <p class="lede" style="margin-bottom:20px">We will look at it properly and write back with
+      what we find — free, no obligation, and useful even if you never hire us. If you do not have
+      a site yet, say so; that is an easier conversation, not a harder one.</p>
+      <div class="btns">
+        <a class="btn btn-p" href="sms:+12526266236">Text (252) 626-6236</a>
+        <a class="btn btn-s" href="mailto:hahntechnologiescorp@gmail.com?subject=Free%20site%20review%20—%20artist">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <strong>Hahn Technologies Corp</strong> · 206 Ellington Street, New Bern, NC 28560<br>
+  Text <a href="sms:+12526266236">(252) 626-6236</a> ·
+  <a href="mailto:hahntechnologiescorp@gmail.com">hahntechnologiescorp@gmail.com</a> ·
+  <a href="/">hahntechcorp.com</a>
+  <div class="v">"Unless the Lord builds the house, they labor in vain who build it." — Psalm 127:1 · Soli Deo Gloria</div>
+</div></footer>
+
+</body>
+</html>
