@@ -26,8 +26,11 @@
   h2{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:34px 0 12px}
   h3{margin:0 0 8px;font-size:19px}
   .stat{display:flex;gap:16px;align-items:baseline;margin-bottom:14px;flex-wrap:wrap}
-  .big{font-size:34px;font-weight:800;color:var(--gold);line-height:1;min-width:74px}
-  .stat div{flex:1;min-width:200px}
+  /* .stat div would match the number too and stretch it to half the row,
+     leaving a strange gap between the figure and what it refers to. */
+  .big{font-size:34px;font-weight:800;color:var(--gold);line-height:1;
+       flex:0 0 auto;min-width:78px}
+  .stat > div:last-child{flex:1;min-width:200px}
   .stat b{display:block}
   .stat span{color:var(--muted);font-size:14.5px}
   ol{padding-left:22px;margin:0}
