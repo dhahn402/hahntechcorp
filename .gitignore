@@ -16,3 +16,7 @@
 
 # Local-only backups of replaced assets — kept on disk, never published.
 _old-icons-*/
+
+# Timestamped local backups — clutter in git, and they made every repo
+# look like it had unfinished work. Added 2026-08-27. Files are kept on disk.
+*.bak-*
